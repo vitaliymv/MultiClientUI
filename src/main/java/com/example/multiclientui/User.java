@@ -31,7 +31,6 @@ public class User extends Thread {
                 Server.messages.add(new Message(username, str));
                 Server.update = true;
                 if (str.contains(" -> joined the chat")) {
-                    // kevin -> joined the chat, ['kevin', 'joined the chat']
                     String getUsername = Server.messages.get(Server.messages.size() - 1).message.split(" -> ")[0];
                     setUsername(getUsername);
                 }
